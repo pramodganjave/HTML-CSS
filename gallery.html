@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue; /* Faint blue background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin: 20px 0; /* Space around the heading */
+        }
+
+        .gallery-container {
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Four images per row by default */
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px; /* Set a fixed height for uniform image size */
+            object-fit: cover; /* Ensures images are cropped to fit within the container */
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .caption {
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .gallery-container {
+                grid-template-columns: repeat(3, 1fr); /* Three images per row for tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr); /* Two images per row for small tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                grid-template-columns: 1fr; /* One image per row for mobile phones */
+            }
+
+            h1 {
+                font-size: 2em; /* Smaller heading size for mobile */
+            }
+
+            .gallery-item img {
+                height: 150px; /* Reduce image height for mobile */
+            }
+
+            .caption {
+                font-size: 14px; /* Smaller caption font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading for the Gallery -->
+    <h1>Gallery</h1>
+
+    <div class="gallery-container">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item">
+            <img src="mulakhat1.jpeg" alt="Gallery Image 1">
+            <div class="caption">Interviews for Admission</div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item">
+            <img src="working.jpeg" alt="Gallery Image 2">
+            <div class="caption">Field Work In College</div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item">
+            <img src="office work.jpeg" alt="Gallery Image 3">
+            <div class="caption">Earn And Learn Office Work</div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item">
+            <img src="nb distribution.jpeg" alt="Gallery Image 4">
+            <div class="caption">Notebook Distribution</div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="gallery-item">
+            <img src="katran.jpg" alt="Gallery Image 5">
+            <div class="caption">Muktagan Paper Cutting Work</div>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="gallery-item">
+            <img src="vikhe patil.jpeg" alt="Gallery Image 6">
+            <div class="caption">Inauguration of Yuva Hi Duva Initiative</div>
+        </div>
+
+        <!-- Gallery Item 7 -->
+        <div class="gallery-item">
+            <img src="kokanigardenfieldwork.jpeg" alt="Gallery Image 7">
+            <div class="caption">Kokani Garden Field Work</div>
+        </div>
+
+        <!-- Gallery Item 8 -->
+        <div class="gallery-item">
+            <img src="award.jpeg" alt="Gallery Image 8">
+            <div class="caption">Neelima Tai Pawar Award</div>
+        </div>
+
+        <!-- Gallery Item 9 -->
+        <div class="gallery-item">
+            <img src="parisar.jpeg" alt="Gallery Image 9">
+            <div class="caption">Cleanliness of Premises</div>
+        </div>
+
+        <!-- Gallery Item 10 -->
+        <div class="gallery-item">
+            <img src="attendance.jpeg" alt="Gallery Image 10">
+            <div class="caption">Attendance For Field Work</div>
+        </div>
+    </div>
+
+</body>
+</html>
