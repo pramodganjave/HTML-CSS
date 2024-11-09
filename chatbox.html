@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <link rel="stylesheet" href="chatbox.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chatbox</h2>
+        </div>
+        <div class="chat-history" id="chat-history">
+            
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value;
+            if (message.trim() !== "") {
+            
+                const userMessage = document.createElement('div');
+                userMessage.className = 'message user';
+                userMessage.textContent = message;
+                document.getElementById('chat-history').appendChild(userMessage);
+
+                
+                input.value = '';
+
+                
+                document.getElementById('chat-history').scrollTop = document.getElementById('chat-history').scrollHeight;
+
+                
+               
+            }
+        }
+    </script>
+</body>
+</html>
